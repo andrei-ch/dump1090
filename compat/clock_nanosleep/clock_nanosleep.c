@@ -24,7 +24,7 @@
 #include <time.h>                            // for nanosleep, NULL
 #include "../clock_gettime/clock_gettime.h"  // for clock_gettime
 
-int clock_nanosleep(clockid_t id, int flags, const struct timespec *ts,
+int clock_nanosleep(clock_id_t id, int flags, const struct timespec *ts,
                     struct timespec *ots) {
     int ret;
 

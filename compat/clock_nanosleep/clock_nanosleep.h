@@ -1,16 +1,7 @@
 #ifndef CLOCK_NANOSLEEP_H
 #define CLOCK_NANOSLEEP_H
 
-#ifndef CLOCKID_T
-#define CLOCKID_T
-typedef enum
-{
-    CLOCK_REALTIME,
-    CLOCK_MONOTONIC,
-    CLOCK_PROCESS_CPUTIME_ID,
-    CLOCK_THREAD_CPUTIME_ID
-} clockid_t;
-#endif // CLOCKID_T
+#include <mach/mach_time.h>
 
 #ifndef TIMER_ABSTIME
 #define TIMER_ABSTIME 1
@@ -18,7 +9,7 @@ typedef enum
 
 struct timespec;
 
-int clock_nanosleep (clockid_t id, int flags, const struct timespec *ts,
+int clock_nanosleep (clock_id_t id, int flags, const struct timespec *ts,
                      struct timespec *ots);
 
 #endif //CLOCK_NANOSLEEP_H

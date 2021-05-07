@@ -9,7 +9,6 @@
 
 /* implementations of clock_gettime, clock_nanosleep */
 
-#include "clock_gettime/clock_gettime.h"
 #include "clock_nanosleep/clock_nanosleep.h"
 
 /*
